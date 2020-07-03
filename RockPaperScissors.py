@@ -48,6 +48,8 @@ def startGame():
                       "Player Wins!")
                 ++playerScore
 
+            playAgain()
+
 
 
 while(b):
@@ -59,3 +61,14 @@ while(b):
     elif userChoice == 0:
         b = False
 
+def playAgain():
+    # If the player whats to play again
+    bool = True
+    while(bool):
+        secondChoice = int(input("Do you want to play again? \n"
+                                 "1: Yes\n"
+                                 "2: No"))
+        if secondChoice == 1:
+            startGame()
+        elif secondChoice == 0:
+            bool = False
